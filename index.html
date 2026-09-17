@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ============================================================
+  لو جبت دومين خاص بعدين (مثلاً ibrahimhemaida.com):
+  1. ضيف ملف اسمه CNAME في جذر الريبو، جواه سطر واحد: ibrahimhemaida.com
+  2. غيّر السطرين المعلَّم عليهم بـ [DOMAIN] تحت
+  3. غيّر "url" في الـ JSON-LD في آخر الملف
+  ============================================================
+-->
+
+<title>Ibrahim Hemaida | Senior Mobile Engineer, Android and Flutter</title>
+<meta name="description" content="Ibrahim Hemaida is a senior mobile engineer and team lead with 13+ years building Android (Kotlin, Jetpack Compose) and Flutter applications, focused on AI-native engineering workflows and open-source developer tooling.">
+<meta name="author" content="Ibrahim Hemaida">
+
+<!-- [DOMAIN] -->
+<link rel="canonical" href="https://ibrahimhemaida.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Ibrahim Hemaida | Senior Mobile Engineer">
+<meta property="og:description" content="Senior mobile engineer and team lead. 13+ years in Android (Kotlin, Jetpack Compose) and Flutter, focused on AI-native engineering workflows.">
+<!-- [DOMAIN] -->
+<meta property="og:url" content="https://ibrahimhemaida.github.io/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/IbrahimHemaida?s=460">
+<meta property="profile:first_name" content="Ibrahim">
+<meta property="profile:last_name" content="Hemaida">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ibrahim Hemaida | Senior Mobile Engineer">
+<meta name="twitter:description" content="Senior mobile engineer and team lead. 13+ years in Android and Flutter, focused on AI-native engineering workflows.">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/IbrahimHemaida?s=460">
+
+<link rel="icon" href="https://avatars.githubusercontent.com/IbrahimHemaida?s=64">
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --border: #e3e6ea;
+    --text: #16191d;
+    --muted: #5b6470;
+    --accent: #1f6feb;
+    --accent-soft: #e8f0fe;
+    --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --border: #272d36;
+      --text: #e8eaed;
+      --muted: #9aa4b2;
+      --accent: #6fa8ff;
+      --accent-soft: #16233a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { display: flex; gap: 22px; align-items: flex-start; margin-bottom: 14px; }
+
+  .avatar {
+    width: 92px; height: 92px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .role {
+    color: var(--muted);
+    font-size: 0.97rem;
+    margin: 0;
+  }
+
+  .lead {
+    font-size: 1.08rem;
+    margin: 22px 0 10px;
+  }
+
+  .alt-name {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 24px;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .links a {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 7px;
+    padding: 7px 14px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 46px 0 18px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 1.06rem;
+    margin: 0 0 6px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+
+  .card p { margin: 0 0 10px; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .case { margin-bottom: 30px; }
+  .case h3 { margin-bottom: 8px; }
+  .case ul { margin: 0; padding-left: 20px; }
+  .case li { margin-bottom: 5px; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+  }
+  .tag {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-size: 0.82rem;
+  }
+
+  .stack dt {
+    font-weight: 600;
+    font-size: 0.93rem;
+    margin-top: 14px;
+  }
+  .stack dd {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 0.93rem;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 36px 18px 60px; }
+    header { flex-direction: column; gap: 16px; }
+    .avatar { width: 76px; height: 76px; }
+    h1 { font-size: 1.65rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="avatar" src="https://avatars.githubusercontent.com/IbrahimHemaida?s=200" alt="Ibrahim Hemaida" width="92" height="92">
+    <div>
+      <h1>Ibrahim Hemaida</h1>
+      <p class="role">Senior Mobile Engineer and Mobile Team Lead · Android (Kotlin, Jetpack Compose) · Flutter · AI-native engineering</p>
+    </div>
+  </header>
+
+  <p class="lead">
+    Ibrahim Hemaida is a senior mobile engineer and team lead with 13+ years building Android
+    and Flutter applications for healthcare, hospitality, and high-traffic consumer products.
+    He works on AI-assisted engineering workflows and builds open-source tooling that keeps
+    AI-generated mobile code architecturally correct.
+  </p>
+
+  <p class="alt-name">Name is also written as Ibraheem Hmeda.</p>
+
+  <nav class="links">
+    <a href="https://github.com/IbrahimHemaida" rel="me">GitHub</a>
+    <a href="https://dev.to/ibrahimhemaida" rel="me">dev.to</a>
+    <a href="https://medium.com/@ibraheem.hmeda" rel="me">Medium</a>
+    <a href="https://www.linkedin.com/in/ibrahimhemaida/" rel="me">LinkedIn</a>
+    <a href="mailto:ibraheem.hmeda@gmail.com">Email</a>
+  </nav>
+
+  <h2>Open Source</h2>
+
+  <div class="card">
+    <h3><a href="https://github.com/IbrahimHemaida/mobile-engineering-skills">mobile-engineering-skills</a></h3>
+    <p>
+      A plugin that reviews Kotlin/Android and Flutter code for the problems static analysis
+      does not catch: layer violations, broken module boundaries, state management that looks
+      fine locally but breaks under real usage, and architectural drift in AI-generated code.
+    </p>
+    <p>
+      AI coding assistants write code that is locally correct and globally wrong. A linter reads
+      one file at a time, so it stays silent. This plugin encodes the review layer that sits above it.
+    </p>
+    <div class="tag-row">
+      <span class="tag">Kotlin</span>
+      <span class="tag">Flutter</span>
+      <span class="tag">Static analysis</span>
+      <span class="tag">AI code review</span>
+    </div>
+  </div>
+
+  <!--
+    لما تجهز وصف Android-Scope و Mobile-Architecture-Ecosystem، انسخ البلوك اللي فوق
+    وغيّر الاسم والرابط والوصف. ما تنشرش قسم من غير وصف حقيقي.
+  -->
+
+  <h2>Writing</h2>
+
+  <div class="card">
+    <h3><a href="https://dev.to/ibrahimhemaida/ai-writes-locally-correct-code-which-is-why-your-linter-is-silent-2d1b">AI Writes Locally Correct Code, Which Is Why Your Linter Is Silent</a></h3>
+    <p>
+      Eight failure patterns AI assistants produce in Kotlin and Dart, sorted into four levels
+      by the tooling that can actually catch them: local rules, relational rules, behavioural
+      checks, and the judgment calls no tool makes for you.
+    </p>
+  </div>
+
+  <p>More articles at <a href="https://dev.to/ibrahimhemaida">dev.to/ibrahimhemaida</a>.</p>
+
+  <h2>Selected Work</h2>
+
+  <div class="case">
+    <h3>Nabed Connect and Nabed TV: healthcare IoT ecosystem</h3>
+    <ul>
+      <li><strong>Challenge:</strong> a nationwide healthcare platform holding 99.9% content availability across restricted clinical networks.</li>
+      <li><strong>Approach:</strong> an offline-first system with local persistence and MQTT device synchronization, plus a custom kiosk launcher with hardware-level MAC activation.</li>
+      <li><strong>Result:</strong> device activation time down 60%, multi-patient session handling improved 30% through a WCAG accessibility-first tablet UI redesign.</li>
+    </ul>
+  </div>
+
+  <div class="case">
+    <h3>RD Labs: AI assistant and caller ID</h3>
+    <ul>
+      <li><strong>Challenge:</strong> modernizing an application with 3M+ users while holding crash rates down and keeping the UI smooth.</li>
+      <li><strong>Approach:</strong> led a full migration to Hilt, Coroutines, and MVVM Clean Architecture with modular configurations, and integrated on-device NLP for real-time processing.</li>
+      <li><strong>Result:</strong> crash rate down 15% measured in Firebase Crashlytics, average UI jank down 40% measured in Android Profiler and Systrace.</li>
+    </ul>
+  </div>
+
+  <div class="case">
+    <h3>Savvy: smart hotel automation</h3>
+    <ul>
+      <li><strong>Challenge:</strong> automating guest experiences over IoT controls without making the interface harder to use.</li>
+      <li><strong>Approach:</strong> integrated PMS and VingCard SDKs over Bluetooth and NFC, wrapped in a UI that stays usable for guests with mobility limitations.</li>
+      <li><strong>Result:</strong> automated guest workflows across 5+ luxury properties, service request resolution 35% faster.</li>
+    </ul>
+  </div>
+
+  <h2>Stack</h2>
+
+  <dl class="stack">
+    <dt>Native Android</dt>
+    <dd>Kotlin, Jetpack Compose, Coroutines, Flow, Dagger Hilt, Room</dd>
+
+    <dt>Cross-platform</dt>
+    <dd>Flutter with BLoC, Provider and Riverpod, Kotlin Multiplatform (KMM)</dd>
+
+    <dt>Architecture</dt>
+    <dd>Clean Architecture, SOLID principles, feature-driven modularization</dd>
+
+    <dt>Quality</dt>
+    <dd>detekt with type resolution, Konsist, mutation testing, unit and integration coverage</dd>
+
+    <dt>Leadership</dt>
+    <dd>Team management, code review, mentoring, agile delivery</dd>
+
+    <dt>Accessibility</dt>
+    <dd>WCAG 2.1 AA, patient-facing clinical UI, cognitive and motor accessibility patterns</dd>
+  </dl>
+
+  <h2>Currently</h2>
+
+  <p>
+    Open to remote Senior and Lead mobile roles.
+    Reach me on <a href="https://www.linkedin.com/in/ibrahimhemaida/">LinkedIn</a>
+    or at <a href="mailto:ibraheem.hmeda@gmail.com">ibraheem.hmeda@gmail.com</a>.
+  </p>
+
+  <footer>
+    Ibrahim Hemaida · Senior Mobile Engineer
+  </footer>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ibrahim Hemaida",
+  "alternateName": ["Ibraheem Hmeda", "Ibrahim Ayman Hemaida"],
+  "jobTitle": "Senior Mobile Engineer and Mobile Team Lead",
+  "description": "Ibrahim Hemaida is a senior mobile engineer and team lead with 13+ years building Android (Kotlin, Jetpack Compose) and Flutter applications, focused on AI-native engineering workflows and open-source developer tooling.",
+  "url": "https://ibrahimhemaida.github.io/",
+  "image": "https://avatars.githubusercontent.com/IbrahimHemaida?s=460",
+  "email": "mailto:ibraheem.hmeda@gmail.com",
+  "knowsAbout": [
+    "Android development",
+    "Kotlin",
+    "Jetpack Compose",
+    "Flutter",
+    "Dart",
+    "Kotlin Multiplatform",
+    "Clean Architecture",
+    "Mobile team leadership",
+    "AI-assisted software engineering",
+    "Static analysis",
+    "Mobile accessibility"
+  ],
+  "sameAs": [
+    "https://github.com/IbrahimHemaida",
+    "https://dev.to/ibrahimhemaida",
+    "https://medium.com/@ibraheem.hmeda",
+    "https://www.linkedin.com/in/ibrahimhemaida/"
+  ]
+}
+</script>
+
+</body>
+</html>
