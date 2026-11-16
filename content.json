@@ -172,7 +172,16 @@
             "Online payments",
             "Claude Code"
           ],
-          "links": [],
+          "links": [
+            {
+              "label": "Android",
+              "url": "https://play.google.com/store/apps/details?id=lifelong.sa&hl=en"
+            },
+            {
+              "label": "IOS",
+              "url": "https://apps.apple.com/il/app/lifelong-%D9%85%D8%AF%D9%89-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9/id6748019786"
+            }
+          ],
           "images": [
             "assets/uploads/1794860622912-screenshot-20261116-094943.png",
             "assets/uploads/1794860823264-screenshot-20261001-215120.png",
@@ -222,7 +231,42 @@
           "tagline": "AI-powered e-commerce app",
           "metric": "Flutter",
           "description": "A shopping app with personalized product recommendations and automated content generation, built on the OpenAI API.",
-          "images": [],
+          "images": [
+            "assets/uploads/1794861297699-screenshot-20260415-001126.jpg",
+            "assets/uploads/1794861300388-screenshot-20260415-001131.jpg",
+            "assets/uploads/1794861302731-screenshot-20260415-001148.jpg",
+            "assets/uploads/1794861305007-screenshot-20260415-001217.jpg",
+            "assets/uploads/1794861307291-screenshot-20260415-001224.jpg",
+            "assets/uploads/1794861309710-screenshot-20260415-001228.jpg",
+            "assets/uploads/1794861312294-screenshot-20260415-001234.jpg",
+            "assets/uploads/1794861314793-screenshot-20260415-001241.jpg",
+            "assets/uploads/1794861317312-screenshot-20260415-001249.jpg",
+            "assets/uploads/1794861319902-screenshot-20260415-001254.jpg",
+            "assets/uploads/1794861322803-screenshot-20260415-001300.jpg",
+            "assets/uploads/1794861326015-screenshot-20260415-001309.jpg",
+            "assets/uploads/1794861328695-screenshot-20260415-001316.jpg",
+            "assets/uploads/1794861331361-screenshot-20260415-001332.jpg",
+            "assets/uploads/1794861333930-screenshot-20260415-001354.jpg",
+            "assets/uploads/1794861336563-screenshot-20260415-001357.jpg",
+            "assets/uploads/1794861339122-screenshot-20260415-001402.jpg",
+            "assets/uploads/1794861341474-screenshot-20260415-001408.jpg",
+            "assets/uploads/1794861343584-screenshot-20260415-001415.jpg",
+            "assets/uploads/1794861346012-screenshot-20260415-001427.jpg",
+            "assets/uploads/1794861348612-screenshot-20260415-001436.jpg",
+            "assets/uploads/1794861351264-screenshot-20260415-001440.jpg",
+            "assets/uploads/1794861354014-screenshot-20260415-001445.jpg",
+            "assets/uploads/1794861356447-screenshot-20260415-001451.jpg",
+            "assets/uploads/1794861359528-screenshot-20260415-001500.jpg",
+            "assets/uploads/1794861362188-screenshot-20260415-001504.jpg",
+            "assets/uploads/1794861364739-screenshot-20260415-001516.jpg",
+            "assets/uploads/1794861367457-screenshot-20260415-001521.jpg",
+            "assets/uploads/1794861370225-screenshot-20260415-001545.jpg",
+            "assets/uploads/1794861374566-screenshot-20260415-001549.jpg",
+            "assets/uploads/1794861377849-screenshot-20260415-001607.jpg",
+            "assets/uploads/1794861380114-screenshot-20260415-001613.jpg",
+            "assets/uploads/1794861382857-screenshot-20260415-005330.jpg",
+            "assets/uploads/1794861386337-screenshot-20260415-005353.jpg"
+          ],
           "tags": [
             "Flutter",
             "OpenAI API",
