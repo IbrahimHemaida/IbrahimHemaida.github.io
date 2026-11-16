@@ -1,346 +1,246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!--
-  ============================================================
-  لو جبت دومين خاص بعدين (مثلاً ibrahimhemaida.com):
-  1. ضيف ملف اسمه CNAME في جذر الريبو، جواه سطر واحد: ibrahimhemaida.com
-  2. غيّر السطرين المعلَّم عليهم بـ [DOMAIN] تحت
-  3. غيّر "url" في الـ JSON-LD في آخر الملف
-  ============================================================
--->
-
 <title>Ibrahim Hemaida | Senior Mobile Engineer, Android and Flutter</title>
 <meta name="description" content="Ibrahim Hemaida is a senior mobile engineer and team lead with 13+ years building Android (Kotlin, Jetpack Compose) and Flutter applications, focused on AI-native engineering workflows and open-source developer tooling.">
 <meta name="author" content="Ibrahim Hemaida">
-
-<!-- [DOMAIN] -->
 <link rel="canonical" href="https://ibrahimhemaida.github.io/">
-
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Ibrahim Hemaida | Senior Mobile Engineer">
 <meta property="og:description" content="Senior mobile engineer and team lead. 13+ years in Android (Kotlin, Jetpack Compose) and Flutter, focused on AI-native engineering workflows.">
-<!-- [DOMAIN] -->
 <meta property="og:url" content="https://ibrahimhemaida.github.io/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/IbrahimHemaida?s=460">
-<meta property="profile:first_name" content="Ibrahim">
-<meta property="profile:last_name" content="Hemaida">
-
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ibrahim Hemaida | Senior Mobile Engineer">
-<meta name="twitter:description" content="Senior mobile engineer and team lead. 13+ years in Android and Flutter, focused on AI-native engineering workflows.">
-<meta name="twitter:image" content="https://avatars.githubusercontent.com/IbrahimHemaida?s=460">
-
 <link rel="icon" href="https://avatars.githubusercontent.com/IbrahimHemaida?s=64">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-  :root {
-    --bg: #ffffff;
-    --surface: #f6f7f9;
-    --border: #e3e6ea;
-    --text: #16191d;
-    --muted: #5b6470;
-    --accent: #1f6feb;
-    --accent-soft: #e8f0fe;
-    --max: 760px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0f1216;
-      --surface: #171b21;
-      --border: #272d36;
-      --text: #e8eaed;
-      --muted: #9aa4b2;
-      --accent: #6fa8ff;
-      --accent-soft: #16233a;
-    }
-  }
+/* Layout: one left-aligned column on a 1120px measure. Each section is a two-track row:
+   a narrow sticky label on the left, content on the right. Numbers are set in the display face. */
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --ink:#101827; --muted:#566074; --line:#D9DEE6;
+  --accent:#1746D1; --accent-ink:#FFFFFF; --tint:#E6ECFB; --ok:#0E7A4F;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C111B; --surface:#141B29; --ink:#EEF1F6; --muted:#9AA5B8; --line:#263044;
+  --accent:#8AAEFF; --accent-ink:#0C111B; --tint:#1A2540; --ok:#4FD39A; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0C111B; --surface:#141B29; --ink:#EEF1F6; --muted:#9AA5B8; --line:#263044;
+  --accent:#8AAEFF; --accent-ink:#0C111B; --tint:#1A2540; --ok:#4FD39A; color-scheme:dark;}
 
-  * { box-sizing: border-box; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+[hidden]{display:none!important}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 
-  html { -webkit-text-size-adjust: 100%; }
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.mark{font:700 1.05rem/1 var(--display);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font:500 .8rem/1 var(--mono);text-decoration:none;color:var(--muted);padding:9px 10px;border-radius:6px;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--tint)}
+.theme{flex:none;width:34px;height:34px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;cursor:pointer;display:grid;place-items:center}
+.theme svg{width:16px;height:16px}
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
+/* hero */
+.hero{padding-block:clamp(48px,9vw,104px) clamp(36px,6vw,64px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(24px,5vw,64px);align-items:end}
+.eyebrow{font:500 .82rem/1.4 var(--mono);color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin:0 0 18px}
+h1{font:800 clamp(2.9rem,10.5vw,7.4rem)/.92 var(--display);letter-spacing:-.045em;margin:0;text-wrap:balance}
+h1 span{display:block}
+h1 span:last-child{color:var(--accent)}
+.lede{font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.45;max-width:34ch;margin:28px 0 0;text-wrap:pretty}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font:400 .85rem/1.4 var(--mono);color:var(--muted)}
+.avail{color:var(--ok);display:inline-flex;align-items:center;gap:8px}
+.avail::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.btn{font:600 .92rem/1 var(--body);text-decoration:none;padding:13px 18px;border-radius:10px;border:1px solid var(--line);background:var(--surface);transition:transform .15s,border-color .15s}
+.btn:hover{transform:translateY(-1px);border-color:var(--ink)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.photo{width:clamp(140px,22vw,250px);aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
 
-  .wrap {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 56px 20px 80px;
-  }
+/* sections */
+.sec{border-top:1px solid var(--line);padding-block:clamp(40px,6vw,72px)}
+.sec-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px clamp(24px,5vw,64px)}
+.sec h2{font:700 1.05rem/1.3 var(--display);letter-spacing:-.01em;margin:0;position:sticky;top:80px;align-self:start}
+.prose p{margin:0 0 1em;max-width:62ch;font-size:1.08rem}
+.prose p:last-child{margin-bottom:0}
 
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px 24px}
+.stat b{display:block;font:800 clamp(2.4rem,5vw,3.6rem)/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;color:var(--muted);font-size:.95rem;max-width:22ch;line-height:1.4}
 
-  header { display: flex; gap: 22px; align-items: flex-start; margin-bottom: 14px; }
+/* timeline */
+.tl{display:grid;gap:36px}
+.job{display:grid;grid-template-columns:118px minmax(0,1fr);gap:6px 24px}
+.job time{font:500 .82rem/1.7 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.job h3{font:700 1.2rem/1.3 var(--display);margin:0;letter-spacing:-.01em}
+.job .org{color:var(--muted);font-size:.95rem;margin:2px 0 10px}
+.job .org b{color:var(--accent);font-weight:600}
+.job ul{margin:0;padding-left:18px;display:grid;gap:6px;max-width:66ch}
+.job li::marker{color:var(--line)}
 
-  .avatar {
-    width: 92px; height: 92px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    flex-shrink: 0;
-  }
+/* projects */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.shot{aspect-ratio:16/10;background:var(--tint);position:relative;overflow:hidden;display:flex;justify-content:center;align-items:flex-start;gap:4%;padding:7% 7% 0;border:0;width:100%;font:inherit}
+button.shot{cursor:zoom-in}
+.shot img{width:29%;flex:none;border-radius:10px 10px 0 0;border:1px solid var(--line);border-bottom:0;box-shadow:0 10px 30px rgb(16 24 39 / .16)}
+.shot img:nth-child(2){margin-top:5%}
+.shot .mono{position:absolute;left:18px;bottom:6px;font:800 clamp(4rem,9vw,5.6rem)/1 var(--display);letter-spacing:-.06em;color:var(--accent);opacity:.9}
+.shot .metric{position:absolute;right:12px;bottom:12px;font:500 .75rem/1 var(--mono);background:var(--surface);color:var(--ink);padding:7px 9px;border-radius:6px;border:1px solid var(--line)}
+.card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font:700 1.25rem/1.25 var(--display);margin:0;letter-spacing:-.015em;overflow-wrap:anywhere}
+.card .tag{color:var(--accent);font-weight:500;font-size:.95rem;margin:0}
+.card p.desc{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{font:400 .74rem/1 var(--mono);padding:6px 8px;border:1px solid var(--line);border-radius:6px;color:var(--muted)}
+.card-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto;padding-top:10px}
+.card-links a,.rows a{font-weight:600;font-size:.92rem;text-decoration-color:var(--accent);text-underline-offset:4px}
+.card-links a::after{content:" ↗";font-family:var(--mono);color:var(--accent)}
 
-  h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin: 0 0 6px;
-    letter-spacing: -0.02em;
-  }
+/* screenshot viewer */
+dialog{border:0;padding:0;background:var(--surface);color:var(--ink);border-radius:14px;max-width:min(96vw,1100px);width:max-content}
+dialog::backdrop{background:rgb(8 12 20 / .72)}
+.viewer-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.viewer-head b{font:700 1.05rem/1.2 var(--display)}
+.viewer-head button{font:600 .85rem/1 var(--body);padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.viewer{display:flex;gap:14px;overflow-x:auto;padding:18px}
+.viewer img{height:min(72vh,640px);width:auto;max-width:none;border-radius:10px;border:1px solid var(--line)}
 
-  .role {
-    color: var(--muted);
-    font-size: 0.97rem;
-    margin: 0;
-  }
+/* skills */
+.skills{display:grid;gap:22px}
+.skill{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 20px;align-items:start}
+.skill h3{font:500 .82rem/1.9 var(--mono);color:var(--muted);margin:0;text-transform:uppercase;letter-spacing:.04em}
+.skill .chips{margin:0}
+.skill .chip{color:var(--ink);background:var(--surface);font-size:.8rem;padding:7px 10px}
 
-  .lead {
-    font-size: 1.08rem;
-    margin: 22px 0 10px;
-  }
+/* rows */
+.rows{display:grid}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:first-child{padding-top:0}
+.row:last-child{border-bottom:0;padding-bottom:0}
+.row b{font-weight:600}
+.row span{color:var(--muted)}
 
-  .alt-name {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin: 0 0 24px;
-  }
+/* footer */
+.foot{border-top:1px solid var(--line);padding-block:clamp(48px,8vw,96px)}
+.foot h2{font:800 clamp(2rem,6vw,4rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 20px;text-wrap:balance}
+.mail{font:500 clamp(1rem,2.4vw,1.5rem)/1.3 var(--mono);color:var(--accent);text-underline-offset:6px;overflow-wrap:anywhere}
+.foot .cta{margin-top:26px}
+.fine{margin-top:44px;font:400 .78rem/1.5 var(--mono);color:var(--muted)}
+.state{padding:120px 0;font:400 .9rem/1.5 var(--mono);color:var(--muted)}
 
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 40px;
-  }
-
-  .links a {
-    border: 1px solid var(--border);
-    background: var(--surface);
-    border-radius: 7px;
-    padding: 7px 14px;
-    font-size: 0.9rem;
-    color: var(--text);
-  }
-  .links a:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  h2 {
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-    color: var(--muted);
-    font-weight: 600;
-    margin: 46px 0 18px;
-    padding-bottom: 9px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  h3 {
-    font-size: 1.06rem;
-    margin: 0 0 6px;
-  }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 22px;
-    margin-bottom: 16px;
-  }
-
-  .card p { margin: 0 0 10px; }
-  .card p:last-child { margin-bottom: 0; }
-
-  .case { margin-bottom: 30px; }
-  .case h3 { margin-bottom: 8px; }
-  .case ul { margin: 0; padding-left: 20px; }
-  .case li { margin-bottom: 5px; }
-
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 12px;
-  }
-  .tag {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 5px;
-    padding: 3px 10px;
-    font-size: 0.82rem;
-  }
-
-  .stack dt {
-    font-weight: 600;
-    font-size: 0.93rem;
-    margin-top: 14px;
-  }
-  .stack dd {
-    margin: 3px 0 0;
-    color: var(--muted);
-    font-size: 0.93rem;
-  }
-
-  footer {
-    margin-top: 56px;
-    padding-top: 22px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 560px) {
-    .wrap { padding: 36px 18px 60px; }
-    header { flex-direction: column; gap: 16px; }
-    .avatar { width: 76px; height: 76px; }
-    h1 { font-size: 1.65rem; }
-  }
+@media (max-width:760px){
+  .hero-grid{grid-template-columns:1fr;align-items:start}
+  .photo{order:-1;width:120px}
+  .sec-grid{grid-template-columns:1fr}
+  .sec h2{position:static;font-size:.82rem;font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .job,.skill{grid-template-columns:1fr}
+  .mark{display:none}
+  .nav{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<header class="bar"><div class="wrap">
+  <a class="mark" href="#top" id="mark"></a>
+  <nav class="nav" id="nav" aria-label="Sections"></nav>
+  <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+  </button>
+</div></header>
+<dialog id="viewer"><div class="viewer-head"><b id="viewer-name"></b><button type="button" id="viewer-close">Close</button></div><div class="viewer" id="viewer-body"></div></dialog>
+<main id="top"><div class="wrap"><p class="state" id="state">Loading…</p></div></main>
 
-  <header>
-    <img class="avatar" src="https://avatars.githubusercontent.com/IbrahimHemaida?s=200" alt="Ibrahim Hemaida" width="92" height="92">
-    <div>
-      <h1>Ibrahim Hemaida</h1>
-      <p class="role">Senior Mobile Engineer and Mobile Team Lead · Android (Kotlin, Jetpack Compose) · Flutter · AI-native engineering</p>
-    </div>
-  </header>
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var t=localStorage.getItem('pf_theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('pf_theme',next);}catch(e){}
+  });
 
-  <p class="lead">
-    Ibrahim Hemaida is a senior mobile engineer and team lead with 13+ years building Android
-    and Flutter applications for healthcare, hospitality, and high-traffic consumer products.
-    He works on AI-assisted engineering workflows and builds open-source tooling that keeps
-    AI-generated mobile code architecturally correct.
-  </p>
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function url(u){u=String(u||'').trim();return /^(https?:\/\/|mailto:|\.{0,2}\/|assets\/|#)/i.test(u)?esc(u):'';}
+  function ext(u){return /^https?:/i.test(u)?' target="_blank" rel="noopener"':'';}
+  function arr(a){return Array.isArray(a)?a:[];}
+  function chips(a){return arr(a).length?'<div class="chips">'+arr(a).map(function(t){return'<span class="chip">'+esc(t)+'</span>';}).join('')+'</div>':'';}
+  function initials(n){var w=String(n||'').replace(/[^A-Za-z0-9 ]/g,' ').trim().split(/\s+/);return esc(((w[0]||'')[0]||'')+((w[1]||'')[0]||(w[0]||'')[1]||'')).toUpperCase();}
 
-  <p class="alt-name">Name is also written as Ibraheem Hmeda.</p>
+  var R={
+    stats:function(s){return'<div class="stats">'+arr(s.items).map(function(i){return'<div class="stat"><b>'+esc(i.value)+'</b><span>'+esc(i.label)+'</span></div>';}).join('')+'</div>';},
+    text:function(s){return'<div class="prose">'+String(s.body||'').split(/\n\s*\n/).map(function(p){return'<p>'+esc(p.trim())+'</p>';}).join('')+'</div>';},
+    timeline:function(s){return'<div class="tl">'+arr(s.items).map(function(i){
+      return'<article class="job"><time>'+esc(i.period)+'</time><div><h3>'+esc(i.role)+'</h3><p class="org"><b>'+esc(i.org)+'</b>'+(i.location?' · '+esc(i.location):'')+'</p>'+
+        (arr(i.bullets).length?'<ul>'+arr(i.bullets).map(function(b){return'<li>'+esc(b)+'</li>';}).join('')+'</ul>':'')+'</div></article>';}).join('')+'</div>';},
+    projects:function(s){return'<div class="cards">'+arr(s.items).map(function(i){
+      var imgs=arr(i.images).concat(i.image?[i.image]:[]).map(url).filter(Boolean), tag=imgs.length?'button':'div';
+      return'<article class="card"><'+tag+' class="shot"'+(imgs.length?' type="button" data-shots="'+esc(imgs.join('|'))+'" data-name="'+esc(i.name)+'" aria-label="Open '+esc(i.name)+' screenshots"':'')+'>'+
+        (imgs.length?imgs.slice(0,3).map(function(u){return'<img src="'+u+'" alt="" loading="lazy">';}).join(''):'<span class="mono" aria-hidden="true">'+initials(i.name)+'</span>')+
+        (i.metric?'<span class="metric">'+esc(i.metric)+'</span>':'')+'</'+tag+'><div class="card-body"><h3>'+esc(i.name)+'</h3>'+
+        (i.tagline?'<p class="tag">'+esc(i.tagline)+'</p>':'')+(i.description?'<p class="desc">'+esc(i.description)+'</p>':'')+chips(i.tags)+
+        (arr(i.links).filter(function(l){return url(l.url);}).length?'<div class="card-links">'+arr(i.links).filter(function(l){return url(l.url);}).map(function(l){return'<a href="'+url(l.url)+'"'+ext(l.url)+'>'+esc(l.label||'Open')+'</a>';}).join('')+'</div>':'')+
+        '</div></article>';}).join('')+'</div>';},
+    skills:function(s){return'<div class="skills">'+arr(s.items).map(function(i){return'<div class="skill"><h3>'+esc(i.group)+'</h3>'+chips(i.tags)+'</div>';}).join('')+'</div>';},
+    links:function(s){return'<div class="rows">'+arr(s.items).map(function(i){var u=url(i.url);
+      return'<div class="row">'+(u?'<a href="'+u+'"'+ext(i.url)+'><b>'+esc(i.label)+'</b></a>':'<b>'+esc(i.label)+'</b>')+(i.note?'<span>'+esc(i.note)+'</span>':'')+'</div>';}).join('')+'</div>';}
+  };
 
-  <nav class="links">
-    <a href="https://github.com/IbrahimHemaida" rel="me">GitHub</a>
-    <a href="https://dev.to/ibrahimhemaida" rel="me">dev.to</a>
-    <a href="https://medium.com/@ibraheem.hmeda" rel="me">Medium</a>
-    <a href="https://www.linkedin.com/in/ibrahimhemaida/" rel="me">LinkedIn</a>
-    <a href="mailto:ibraheem.hmeda@gmail.com">Email</a>
-  </nav>
+  function render(d){
+    var p=d.profile||{}, secs=arr(d.sections).filter(function(s){return s.visible!==false&&R[s.type];});
+    document.title=(d.site&&d.site.title)||p.name||'Portfolio';
+    document.getElementById('mark').textContent=p.name||'';
+    document.getElementById('nav').innerHTML=secs.map(function(s){return'<a href="#'+esc(s.id)+'">'+esc(s.title)+'</a>';}).join('')+'<a href="#contact">Contact</a>';
+    var name=String(p.name||'').trim().split(/\s+/), first=name.slice(0,-1).join(' ')||name[0]||'', last=name.length>1?name[name.length-1]:'';
+    var mail=p.email?'mailto:'+p.email:'', cv=url(p.resumeUrl), photo=url(p.photo);
+    var links=arr(p.links).filter(function(l){return url(l.url);}).map(function(l){return'<a class="btn" href="'+url(l.url)+'"'+ext(l.url)+'>'+esc(l.label)+'</a>';}).join('');
+    var cta=(mail?'<a class="btn primary" href="'+esc(mail)+'">Email me</a>':'')+(cv?'<a class="btn" href="'+cv+'"'+ext(p.resumeUrl)+'>Résumé</a>':'')+links;
+    var h='<div class="wrap"><section class="hero"><div class="hero-grid"><div>'+
+      '<p class="eyebrow">'+esc(p.role)+'</p><h1><span>'+esc(first)+'</span>'+(last?'<span>'+esc(last)+'</span>':'')+'</h1>'+
+      '<p class="lede">'+esc(p.headline)+'</p><div class="meta">'+(p.availability?'<span class="avail">'+esc(p.availability)+'</span>':'')+(p.location?'<span>'+esc(p.location)+'</span>':'')+'</div>'+
+      '<div class="cta">'+cta+'</div></div>'+(photo?'<img class="photo" src="'+photo+'" alt="'+esc(p.name)+'">':'')+'</div></section>';
+    secs.forEach(function(s){h+='<section class="sec" id="'+esc(s.id)+'"><div class="sec-grid"><h2>'+esc(s.title)+'</h2><div>'+R[s.type](s)+'</div></div></section>';});
+    h+='<footer class="foot" id="contact"><h2>Let’s build something people use.</h2>'+(p.email?'<a class="mail" href="'+esc(mail)+'">'+esc(p.email)+'</a>':'')+
+      '<div class="cta">'+(cv?'<a class="btn" href="'+cv+'"'+ext(p.resumeUrl)+'>Résumé</a>':'')+links+'</div>'+
+      '<p class="fine">'+esc(p.name)+(p.location?' · '+esc(p.location):'')+' · '+new Date().getFullYear()+'</p></footer></div>';
+    document.querySelector('main').innerHTML=h;
+  }
 
-  <h2>Open Source</h2>
+  var dlg=document.getElementById('viewer');
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('[data-shots]');
+    if(b){document.getElementById('viewer-name').textContent=b.getAttribute('data-name');
+      document.getElementById('viewer-body').innerHTML=b.getAttribute('data-shots').split('|').map(function(u){return'<img src="'+esc(u)+'" alt="'+esc(b.getAttribute('data-name'))+' screenshot">';}).join('');
+      dlg.showModal();}
+    else if(e.target===dlg||e.target.id==='viewer-close')dlg.close();
+  });
 
-  <div class="card">
-    <h3><a href="https://github.com/IbrahimHemaida/mobile-engineering-skills">mobile-engineering-skills</a></h3>
-    <p>
-      A plugin that reviews Kotlin/Android and Flutter code for the problems static analysis
-      does not catch: layer violations, broken module boundaries, state management that looks
-      fine locally but breaks under real usage, and architectural drift in AI-generated code.
-    </p>
-    <p>
-      AI coding assistants write code that is locally correct and globally wrong. A linter reads
-      one file at a time, so it stays silent. This plugin encodes the review layer that sits above it.
-    </p>
-    <div class="tag-row">
-      <span class="tag">Kotlin</span>
-      <span class="tag">Flutter</span>
-      <span class="tag">Static analysis</span>
-      <span class="tag">AI code review</span>
-    </div>
-  </div>
-
-  <!--
-    لما تجهز وصف Android-Scope و Mobile-Architecture-Ecosystem، انسخ البلوك اللي فوق
-    وغيّر الاسم والرابط والوصف. ما تنشرش قسم من غير وصف حقيقي.
-  -->
-
-  <h2>Writing</h2>
-
-  <div class="card">
-    <h3><a href="https://dev.to/ibrahimhemaida/ai-writes-locally-correct-code-which-is-why-your-linter-is-silent-2d1b">AI Writes Locally Correct Code, Which Is Why Your Linter Is Silent</a></h3>
-    <p>
-      Eight failure patterns AI assistants produce in Kotlin and Dart, sorted into four levels
-      by the tooling that can actually catch them: local rules, relational rules, behavioural
-      checks, and the judgment calls no tool makes for you.
-    </p>
-  </div>
-
-  <p>More articles at <a href="https://dev.to/ibrahimhemaida">dev.to/ibrahimhemaida</a>.</p>
-
-  <h2>Selected Work</h2>
-
-  <div class="case">
-    <h3>Nabed Connect and Nabed TV: healthcare IoT ecosystem</h3>
-    <ul>
-      <li><strong>Challenge:</strong> a nationwide healthcare platform holding 99.9% content availability across restricted clinical networks.</li>
-      <li><strong>Approach:</strong> an offline-first system with local persistence and MQTT device synchronization, plus a custom kiosk launcher with hardware-level MAC activation.</li>
-      <li><strong>Result:</strong> device activation time down 60%, multi-patient session handling improved 30% through a WCAG accessibility-first tablet UI redesign.</li>
-    </ul>
-  </div>
-
-  <div class="case">
-    <h3>RD Labs: AI assistant and caller ID</h3>
-    <ul>
-      <li><strong>Challenge:</strong> modernizing an application with 3M+ users while holding crash rates down and keeping the UI smooth.</li>
-      <li><strong>Approach:</strong> led a full migration to Hilt, Coroutines, and MVVM Clean Architecture with modular configurations, and integrated on-device NLP for real-time processing.</li>
-      <li><strong>Result:</strong> crash rate down 15% measured in Firebase Crashlytics, average UI jank down 40% measured in Android Profiler and Systrace.</li>
-    </ul>
-  </div>
-
-  <div class="case">
-    <h3>Savvy: smart hotel automation</h3>
-    <ul>
-      <li><strong>Challenge:</strong> automating guest experiences over IoT controls without making the interface harder to use.</li>
-      <li><strong>Approach:</strong> integrated PMS and VingCard SDKs over Bluetooth and NFC, wrapped in a UI that stays usable for guests with mobility limitations.</li>
-      <li><strong>Result:</strong> automated guest workflows across 5+ luxury properties, service request resolution 35% faster.</li>
-    </ul>
-  </div>
-
-  <h2>Stack</h2>
-
-  <dl class="stack">
-    <dt>Native Android</dt>
-    <dd>Kotlin, Jetpack Compose, Coroutines, Flow, Dagger Hilt, Room</dd>
-
-    <dt>Cross-platform</dt>
-    <dd>Flutter with BLoC, Provider and Riverpod, Kotlin Multiplatform (KMM)</dd>
-
-    <dt>Architecture</dt>
-    <dd>Clean Architecture, SOLID principles, feature-driven modularization</dd>
-
-    <dt>Quality</dt>
-    <dd>detekt with type resolution, Konsist, mutation testing, unit and integration coverage</dd>
-
-    <dt>Leadership</dt>
-    <dd>Team management, code review, mentoring, agile delivery</dd>
-
-    <dt>Accessibility</dt>
-    <dd>WCAG 2.1 AA, patient-facing clinical UI, cognitive and motor accessibility patterns</dd>
-  </dl>
-
-  <h2>Currently</h2>
-
-  <p>
-    Open to remote Senior and Lead mobile roles.
-    Reach me on <a href="https://www.linkedin.com/in/ibrahimhemaida/">LinkedIn</a>
-    or at <a href="mailto:ibraheem.hmeda@gmail.com">ibraheem.hmeda@gmail.com</a>.
-  </p>
-
-  <footer>
-    Ibrahim Hemaida · Senior Mobile Engineer
-  </footer>
-
-</div>
-
+  var draft=null;
+  if(/[?&]preview=1/.test(location.search)){try{draft=JSON.parse(localStorage.getItem('pf_draft'));}catch(e){}}
+  if(draft){render(draft);return;}
+  fetch('content.json?v='+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json();}).then(render).catch(function(){
+    document.getElementById('state').textContent='Could not load content.json. Check that the file sits next to index.html.';
+  });
+})();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -373,6 +273,6 @@
   ]
 }
 </script>
-
+<noscript><p style="padding:40px 20px;font-family:sans-serif">Ibrahim Hemaida, Senior Mobile Engineer and Team Lead (Android, Kotlin, Flutter). Contact: ibraheem.hmeda@gmail.com · <a href="https://www.linkedin.com/in/ibrahimhemaida/">LinkedIn</a> · <a href="https://github.com/IbrahimHemaida">GitHub</a></p></noscript>
 </body>
 </html>

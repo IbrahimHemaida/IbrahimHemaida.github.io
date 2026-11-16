@@ -1,0 +1,400 @@
+{
+  "site": {
+    "title": "Ibrahim Hemaida | Senior Mobile Engineer, Android and Flutter"
+  },
+  "profile": {
+    "name": "Ibrahim Hemaida",
+    "role": "Senior Mobile Engineer · Team Lead",
+    "headline": "I build Android and Flutter apps that millions of people use, and I lead the teams that ship them.",
+    "location": "Gaza, Palestine · Remote",
+    "availability": "Open to Senior / Lead mobile roles",
+    "email": "ibraheem.hmeda@gmail.com",
+    "photo": "https://avatars.githubusercontent.com/IbrahimHemaida?s=460",
+    "resumeUrl": "",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/ibrahimhemaida"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/ibrahimhemaida"
+      },
+      {
+        "label": "dev.to",
+        "url": "https://dev.to/ibrahimhemaida"
+      },
+      {
+        "label": "Medium",
+        "url": "https://medium.com/@ibraheem.hmeda"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "numbers",
+      "type": "stats",
+      "title": "In numbers",
+      "visible": true,
+      "items": [
+        {
+          "value": "13",
+          "label": "years building mobile products"
+        },
+        {
+          "value": "3M+",
+          "label": "active users on the largest app I led"
+        },
+        {
+          "value": "50+",
+          "label": "apps delivered, 4 with 100K+ users each"
+        },
+        {
+          "value": "100+",
+          "label": "clinics running a healthcare IoT rollout"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "type": "text",
+      "title": "About",
+      "visible": true,
+      "body": "I'm a mobile engineer with 13 years in Kotlin and Flutter, across consumer apps, healthcare, IoT, hospitality and e-commerce. At RD Labs (USA) I was promoted to Team Lead within six months and led mobile delivery for a platform with more than 3 million active users.\n\nI care about results a business can measure: retention, conversion, stability. I also work AI-native. Coding agents are part of my daily workflow, and I built an open-source toolkit that keeps their output inside the architecture, testing and security rules a production app needs."
+    },
+    {
+      "id": "experience",
+      "type": "timeline",
+      "title": "Experience",
+      "visible": true,
+      "items": [
+        {
+          "role": "Senior Mobile Team Lead & Senior Android Developer",
+          "org": "RD Labs LLC",
+          "period": "2022 — 2026",
+          "location": "USA · Remote",
+          "bullets": [
+            "Promoted to Team Lead within 6 months; led the Android team with Product and Design on roadmap, sprint planning and release quality.",
+            "Grew 30-day retention by 25% (A/B tested) with an AI call assistant and on-device call screening.",
+            "Cut crashes by 15% for 3M+ active users by modernizing the core architecture (Kotlin, Hilt, Coroutines, MVVM).",
+            "Cut UI jank by 40% with team-wide performance standards for startup and rendering."
+          ]
+        },
+        {
+          "role": "Senior Android Developer",
+          "org": "Nabed Health Education Solutions",
+          "period": "2018 — 2022",
+          "location": "KSA & Lebanon · Remote",
+          "bullets": [
+            "Scaled a healthcare IoT platform (Nabed Connect & Nabed TV) to 100+ clinics with offline-first sync.",
+            "Reduced patient session drop-off by 30% by redesigning clinical tablet flows to WCAG 2.1 AA.",
+            "Cut device activation time by 60% with a custom kiosk launcher.",
+            "Kept patient education content 99.9% available on restricted networks."
+          ]
+        },
+        {
+          "role": "Senior Mobile Developer (Contract)",
+          "org": "Mawaqaa",
+          "period": "2021 — 2022",
+          "location": "Kuwait · Remote",
+          "bullets": [
+            "Raised checkout conversion by 20% by rebuilding payment and delivery-tracking flows for GCC platforms, including Flythru.",
+            "Kept app launch under 2 seconds across 5+ marketplace apps."
+          ]
+        },
+        {
+          "role": "Mobile Consultant & Team Lead",
+          "org": "Confidential client",
+          "period": "2020 — 2021",
+          "location": "USA · Remote",
+          "bullets": [
+            "Led a team of 3 developers for a year, owning sprint delivery, code quality, architecture standards and mentoring."
+          ]
+        },
+        {
+          "role": "Senior Android Developer",
+          "org": "Savvy World (Hotel Automation)",
+          "period": "2016 — 2020",
+          "location": "Dubai, UAE · Remote",
+          "bullets": [
+            "Cut front-desk service resolution time by 35% by connecting hotel management systems (PMS) with in-room controls.",
+            "Automated guest experiences across 5+ luxury hotels, including keyless entry (VingCard SDK, Bluetooth, NFC)."
+          ]
+        },
+        {
+          "role": "Senior Mobile Developer & Consultant",
+          "org": "Freelance / Consulting",
+          "period": "2014 — now",
+          "location": "Global · Remote",
+          "bullets": [
+            "Shipped mobile products for clients in KSA, UAE, Kuwait, Sweden and the USA.",
+            "Sped up feature delivery by 40% with AI-assisted development workflows."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "type": "projects",
+      "title": "Selected work",
+      "visible": true,
+      "items": [
+        {
+          "name": "WHO Caller ID",
+          "tagline": "AI call screening for 3M+ users",
+          "metric": "3M+ users",
+          "description": "Led the Android team at RD Labs. Launched an AI call assistant that answers calls and turns each one into a summarized transcript, plus on-device call screening.",
+          "tags": [
+            "Kotlin",
+            "Compose",
+            "On-device NLP",
+            "A/B testing"
+          ],
+          "links": [
+            {
+              "label": "Google Play",
+              "url": "https://play.google.com/store/apps/details?id=com.cascadialabs.who&hl=en"
+            }
+          ],
+          "images": [
+            "assets/shots/who-1.jpg",
+            "assets/shots/who-2.jpg"
+          ]
+        },
+        {
+          "name": "Lifelong",
+          "tagline": "E-commerce app with online payments",
+          "metric": "100K+ users",
+          "description": "A live flower and gift delivery app. I lead version 3: a full redesign and new features, built AI-native with Claude Code and my own guard skills.",
+          "tags": [
+            "Flutter",
+            "Firebase",
+            "Online payments",
+            "Claude Code"
+          ],
+          "links": [],
+          "images": []
+        },
+        {
+          "name": "PayOff",
+          "tagline": "Offline peer-to-peer payment wallet",
+          "metric": "Internal pilot",
+          "description": "Pay by NFC or QR with no connection. Transactions are signed with ECDSA in the Android Keystore and synced later. Built in Kotlin and Compose with a multi-agent AI workflow, then ported to Flutter.",
+          "tags": [
+            "Kotlin",
+            "Jetpack Compose",
+            "NFC / HCE",
+            "Android Keystore"
+          ],
+          "links": [],
+          "images": []
+        },
+        {
+          "name": "Savvy Store",
+          "tagline": "AI-powered e-commerce app",
+          "metric": "Flutter",
+          "description": "A shopping app with personalized product recommendations and automated content generation, built on the OpenAI API.",
+          "images": [],
+          "tags": [
+            "Flutter",
+            "OpenAI API",
+            "E-commerce"
+          ],
+          "links": []
+        },
+        {
+          "name": "Nabed",
+          "tagline": "Healthcare IoT across 100+ clinics",
+          "metric": "100+ clinics",
+          "description": "Patient education on clinic tablets and TVs, with offline-first sync, DRM-protected video and a kiosk launcher that activates devices automatically.",
+          "tags": [
+            "Android",
+            "MQTT",
+            "ExoPlayer",
+            "WCAG 2.1 AA"
+          ],
+          "links": [
+            {
+              "label": "Google Play",
+              "url": "https://play.google.com/store/apps/details?id=nabed.apps.doctorApp&hl=en"
+            }
+          ],
+          "images": [
+            "assets/shots/nabed-1.jpg",
+            "assets/shots/nabed-2.jpg"
+          ]
+        },
+        {
+          "name": "Savvy Hotels",
+          "tagline": "Hotel automation for 5+ luxury hotels",
+          "metric": "35% faster service",
+          "description": "Guests order room service, control the lights, air conditioning and TV, and open the door from their phone. Deployed at hotels including The Address and the QE2. The app connects hotel management systems with in-room IoT controls.",
+          "tags": [
+            "Android",
+            "Bluetooth",
+            "NFC",
+            "VingCard SDK"
+          ],
+          "links": [],
+          "images": [
+            "assets/shots/savvy-1.jpg",
+            "assets/shots/savvy-2.jpg",
+            "assets/shots/savvy-3.jpg"
+          ]
+        },
+        {
+          "name": "mobile-engineering-skills",
+          "tagline": "Open-source Claude Code plugin",
+          "metric": "14 skills",
+          "description": "A free toolkit for mobile teams that work with coding agents. It scaffolds Android and Flutter projects, checks architecture, tests, security and accessibility, and diagnoses build failures.",
+          "tags": [
+            "Claude Code",
+            "Open source",
+            "MIT"
+          ],
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/IbrahimHemaida/mobile-engineering-skills"
+            }
+          ],
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "type": "links",
+      "title": "Writing & open source",
+      "visible": true,
+      "items": [
+        {
+          "label": "AI Writes Locally Correct Code, Which Is Why Your Linter Is Silent",
+          "note": "Article · dev.to",
+          "url": "https://dev.to/ibrahimhemaida/ai-writes-locally-correct-code-which-is-why-your-linter-is-silent-2d1b"
+        },
+        {
+          "label": "mobile-engineering-skills",
+          "note": "Claude Code plugin · 14 skills",
+          "url": "https://github.com/IbrahimHemaida/mobile-engineering-skills"
+        },
+        {
+          "label": "Mobile-Architecture-Ecosystem",
+          "note": "Android, Flutter and KMM architecture templates",
+          "url": "https://github.com/IbrahimHemaida/Mobile-Architecture-Ecosystem"
+        },
+        {
+          "label": "Android-Scope",
+          "note": "GitHub repository",
+          "url": "https://github.com/IbrahimHemaida/Android-Scope"
+        },
+        {
+          "label": "Screenshot archive",
+          "note": "All app screenshots · Google Drive",
+          "url": "https://drive.google.com/drive/folders/0B6Hz2lQGeFQANE94TV9WUGRnZ2M?resourcekey=0-P7kjcAJi2Y-o3Xf3BSb4qA"
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "type": "skills",
+      "title": "Skills",
+      "visible": true,
+      "items": [
+        {
+          "group": "Android",
+          "tags": [
+            "Kotlin",
+            "Jetpack Compose",
+            "Hilt",
+            "Coroutines & Flow",
+            "MVVM / MVI",
+            "Clean Architecture",
+            "Room",
+            "Retrofit",
+            "WorkManager",
+            "Multi-module Gradle"
+          ]
+        },
+        {
+          "group": "Cross-platform",
+          "tags": [
+            "Flutter",
+            "BLoC",
+            "Riverpod",
+            "GoRouter",
+            "Kotlin Multiplatform"
+          ]
+        },
+        {
+          "group": "AI engineering",
+          "tags": [
+            "Claude Code",
+            "Cursor",
+            "Codex",
+            "Gemini API",
+            "OpenAI API",
+            "Multi-agent workflows",
+            "On-device ML"
+          ]
+        },
+        {
+          "group": "Leadership",
+          "tags": [
+            "Team lead",
+            "Architecture ownership",
+            "Sprint planning",
+            "Code review",
+            "Mentoring"
+          ]
+        },
+        {
+          "group": "Quality & security",
+          "tags": [
+            "TDD",
+            "JUnit",
+            "MockK",
+            "Espresso",
+            "Certificate pinning",
+            "Android Keystore",
+            "WCAG 2.1 AA"
+          ]
+        },
+        {
+          "group": "Delivery",
+          "tags": [
+            "CI/CD",
+            "Firebase",
+            "Baseline Profiles",
+            "Android Profiler",
+            "Google Play publishing",
+            "Offline-first sync"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "type": "links",
+      "title": "Education & languages",
+      "visible": true,
+      "items": [
+        {
+          "label": "B.Sc. Computer Software Engineering",
+          "url": "",
+          "note": "Azhar University, Gaza · 2008 — 2014"
+        },
+        {
+          "label": "Arabic",
+          "url": "",
+          "note": "Native"
+        },
+        {
+          "label": "English",
+          "url": "",
+          "note": "Professional working proficiency"
+        }
+      ]
+    }
+  ]
+}
