@@ -140,6 +140,24 @@
       "visible": true,
       "items": [
         {
+          "name": "mobile-engineering-skills",
+          "tagline": "Open-source Claude Code plugin",
+          "metric": "14 skills",
+          "description": "A free toolkit for mobile teams that work with coding agents. It scaffolds Android and Flutter projects, checks architecture, tests, security and accessibility, and diagnoses build failures.",
+          "tags": [
+            "Claude Code",
+            "Open source",
+            "MIT"
+          ],
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/IbrahimHemaida/mobile-engineering-skills"
+            }
+          ],
+          "images": []
+        },
+        {
           "name": "WHO Caller ID",
           "tagline": "AI call screening for 3M+ users",
           "metric": "3M+ users",
@@ -313,24 +331,6 @@
             "assets/shots/savvy-2.jpg",
             "assets/shots/savvy-3.jpg"
           ]
-        },
-        {
-          "name": "mobile-engineering-skills",
-          "tagline": "Open-source Claude Code plugin",
-          "metric": "14 skills",
-          "description": "A free toolkit for mobile teams that work with coding agents. It scaffolds Android and Flutter projects, checks architecture, tests, security and accessibility, and diagnoses build failures.",
-          "tags": [
-            "Claude Code",
-            "Open source",
-            "MIT"
-          ],
-          "links": [
-            {
-              "label": "GitHub",
-              "url": "https://github.com/IbrahimHemaida/mobile-engineering-skills"
-            }
-          ],
-          "images": []
         }
       ]
     },
